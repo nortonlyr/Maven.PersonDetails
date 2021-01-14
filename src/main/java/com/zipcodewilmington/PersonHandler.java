@@ -4,25 +4,23 @@ package com.zipcodewilmington;
  * Created by leon on 1/24/18.
  */
 public class PersonHandler {
-    private final Person[] personArray;
+	
+	private final Person[] personArray;
 
     public PersonHandler(Person[] personArray) {
         this.personArray = personArray;
     }
 
     public String whileLoop() {
+    	
         String result = "";
-        StringBuilder names = new StringBuilder();
+        int count = 0;
 
-        int counter = 0;
-
-        while (counter < personArray.length) {
-            names.append(personArray[counter]);
-            counter++;
+        while (count < personArray.length) {
+           result += personArray[count];
+            count++;
         }
-
-
-        result = names.toString();
+        
         return result;
     }
 
