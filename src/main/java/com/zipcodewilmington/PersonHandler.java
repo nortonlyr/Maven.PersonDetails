@@ -1,7 +1,7 @@
 package com.zipcodewilmington;
 
 /**
- * Created by leon on 1/24/18.
+ * Edited by Norton on 1/14/21.
  */
 public class PersonHandler {
 	
@@ -34,30 +34,23 @@ public class PersonHandler {
         for (int i = 0; i < personArray.length; i++) {
 
             names.append(personArray[counter]);
-            counter++;
+            result += personArray[i];
         }
 
-        result = names.toString();
         return result;
     }
 
 
     public String forEachLoop() {
         String result = "";
-        StringBuilder names = new StringBuilder();
-
-        for (Person s : personArray) {
-            names.append(s);
-
-        }
-
-        result = names.toString();
-        return result;
-
-
+        for (Person p: personArray) {
+        	result += p.toString();
     }
-        public Person[] getPersonArray() {
-
+        return result;
+    }
+   
+    
+    public Person[] getPersonArray() {
 
             return personArray;
         }
